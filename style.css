@@ -1,3 +1,28 @@
+:root {
+    /*color*/
+    --white:  rgb(253, 254, 255);
+    --pastelred:#fd6a6a;
+    --lighsalmonpink:#ffa3a3;
+    --lavenderblue: #c7d8fc;
+    --gargoylegas: #ffdc40;
+    --deeplemon: #fed521;
+    --mustard: #ffe56f;
+    --lighsilver: #d2d6df;
+    --nickle: #6e7276;
+    --black: #010101;
+
+
+    --fs-1: 6.5rem;
+    --fs-2: 3.2rem;
+    --fs-3: 2.4rem;
+    --fs-4: 2rem;
+    --fs-5: 1.8rem;
+    --fs-6: 1.5rem;
+    --fs-7: 1.1rem;
+    --fs-8: 1rem;
+    --fs-9: 0.1rem;
+}
+
 /*------REUSE-------*/
 body {
     font-family: 'Balsamiq Sans', sans-serif;
@@ -6,16 +31,16 @@ a {
     text-decoration: none;
 }
 p {
-    color: hsl(210, 2%, 37%);
-    line-height: 2rem;
+    color:var(--nickle);
+    line-height: 4vh;
 }
 h1{
-    font-size: 2.3rem;
+    font-size: var(--fs-3);
 }
 h3{
-    color: #fd6a6a;
+    color: var(--pastelred);
     font-weight: lighter;
-    font-size: 25px;
+    font-size: var(--fs-6);
     letter-spacing: 0.1rem;
     
 }
@@ -26,7 +51,7 @@ h3{
     justify-content: space-between;
     position: fixed;
     min-width: 100%;
-    min-height: 100px;
+    min-height: var(--fs-1);
     box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
     align-items: center;
     z-index: 999;
@@ -34,17 +59,20 @@ h3{
 .nav-main ul {
     display: inline-flex;
     list-style: none;
-    margin-right: 165px;
+    margin-right: 10%;
 }
 .nav-main li a {
-    font-size: 18px;
-    color: rgb(94, 94, 94);
+    font-size: var(--fs-7);
+    color: #010101;
     font-weight: 500;
-    padding: 0 30px 0 0;
-    letter-spacing: 1px;
+    padding: 0 25px 0 20px;
+    letter-spacing: var(--fs-9);
+}
+.nav-main li a:hover{
+    color: var(--pastelred);
 }
 .nav-logo{
-    margin-left: 189px;
+    margin-left: 10%;
 }
 main{
     display: grid;
@@ -53,14 +81,15 @@ main{
 .hero-main{
     position: relative;
     grid-column: 3 span;
-    margin-top: 100px;
+    margin-top: var(--fs-1);
 }
+
 .hero-image {
     position: relative;
     background-image: url(img/hero-image.png);
-    background-size: cover;
+    background-size:cover;
     background-position: center;
-    height: 770px;
+    height: 699px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -70,26 +99,22 @@ main{
     grid-row: 3;
     max-width: 500px;
     left: 30%;
-    top: 10%;
+    top: 13%;
     text-transform: capitalize;
-    color: hsl(210, 3%, 16%);
     text-align: justify;
     top: -2%;
 }
 
 .hero-learnmore-btn{
     position: relative;
-    background-image: url(img/thumb1.png);
-    background-color: #fed521;
-    background-repeat: no-repeat;
-    background-position: 25px center;
-    background-size: 25px;
+    background-color: var(--gargoylegas);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 30px;
-    padding:10px 30px 10px 60px;
+    padding:2.5% 5% 2.5% 5%;
     top: 10%;
     font-size: 15px;
+    letter-spacing: 0.2rem;
    
 }
 /* Pseudo-element untuk border di tengah */
@@ -99,7 +124,7 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px dashed rgb(253, 254, 255); 
+    border: 2px dashed var(--white); 
     border-radius: 30px;
     width: calc(100% - 5px); 
     height: calc(100% - 5px); 
@@ -108,7 +133,8 @@ main{
 }
 
 .hero-learnmore-btn:hover {
-    background-color:#fec321 ;
+    background-color:var(--deeplemon);
+    background-color: rgba(0, 0, 0, 0);
 }
 .hero-image-icon {
     grid-column: 5;
@@ -134,8 +160,9 @@ main{
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 90px;
+    padding: 32%;
     left: -18%;
+    cursor: pointer;
 }
 
 .hero-image-sun-icon:hover {
@@ -187,14 +214,15 @@ main{
 }
 */
 .program-main {
-    margin: 100px  60px 100px 40px;
-    grid-column: 3 span;   
+    margin: 125px  60px 125px 40px;
+    grid-column: 3 span;  
 }
 .program-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    gap: 1rem 2rem;
+    gap: 1rem 1rem;
+    margin: 0 -0.05% 0 0%;
 }
 .program-content img {
     display: block;
@@ -215,32 +243,155 @@ main{
 }
 
 .program-icon-great-teacher {
-    background-color: #ffa4a4;
+    background-color: var(--lighsalmonpink);
 }
 .program-icon-quality-care {
-    background-color: #ffe46b;
+    background-color: var(--mustard);
 }
 .program-icon-playground {
-    background-color: #c9dafc;
+    background-color: var(--lavenderblue);
 }
 .program-icon-curriculum {
-    background-color: #d2d6df;
+    background-color: var(--lighsilver);
 }
 .about-main {
     grid-column: 3 span;
-    background-color: #c7d8fc;
+    background-color: var(--lavenderblue)
 }
 .about {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    height: 500px;
-    margin: 100px  190px 100px 170px;
+    grid-template-columns: 1.4fr 1fr;
+    height: 600px;
+    margin: 120px  220px 100px 190px;
 }
 .about-text {
-   margin-top: 100px;
+   margin-top: 0;
     
 }
 .about-text h1 {
-    letter-spacing: 0.7rem;
+    letter-spacing: 0.5rem;
     margin-bottom: 20px;
+}
+.about-text span{
+    margin-right: 4%;
+    padding:0 2.5%;
+    background-color: var(--lighsalmonpink);
+    color: var(--black);
+    border-radius: 50%;
+    text-align: center;
+    font-size: var(--fs-4);
+}
+hr {
+    margin-left: 12%;
+}
+.gallery-main {
+    display: grid;
+    grid-column: 3 span;
+    height: 600px;
+    margin: 120px 220px 500px 190px;
+}
+.gallery-title {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin: 150px 0 50px 0;
+    letter-spacing: 0.5rem;
+}
+.gallery-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    overflow-x: hidden;
+    max-width: 100%;
+    height: 500px;
+}
+.gallery-content img {
+    border-radius: 20px;
+    width: 780px;
+    height: 500px;
+   
+}
+.gallery-image1, 
+.gallery-image4 {
+    background-position: center;
+    
+    background-size: cover;
+    border-radius: 20px;
+} 
+.gallery-image1 {
+    grid-column: 2 span;
+    
+}
+.gallery-image4 {
+    grid-column: 2 span;
+}
+.gallery-image1:hover .img-cover,
+.gallery-image2:hover .img-cover,
+.gallery-image3:hover .img-cover,
+.gallery-image4:hover .img-cover,
+.gallery-image5:hover .img-cover,
+.gallery-image6:hover .img-cover {
+    transform: scale(1.03);
+    opacity: 0.6;
+    
+}
+.teachers-main {
+    display: grid;
+    grid-column: 3 span;
+    background-color: var(--lavenderblue);  
+}
+
+.teacher-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 120px 220px 500px 190px;
+}
+.teacher-frame-card {
+    background-color: var(--white);
+    width: 80%;
+    display: flex;
+    transform: rotate(-2deg);
+    gap: 2rem;
+}
+.teacher1 {
+    width: 700px;
+    transform: rotate(2deg);
+   
+   
+}
+.teacher-content {
+    display: block;
+    width: 80%;
+    text-align: center;
+    padding: 80px 0 80px 0;
+    letter-spacing: 0.1rem;
+    line-height: 2.2rem;
+    
+}
+.teacher-content p {
+    font-size: 13px;
+    letter-spacing: normal;
+}
+.teacher-content ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.teacher-content li {
+    display: block;
+    margin: 0;
+    padding: 30px 10px 0px 10px;
+}
+.teacher-content li{
+}
+.teacher-content a img {
+    width: 25px;
+}
+.paper-pin {
+    width: 20%;
+    height: 15%;
+    position: relative;
+    top: -8%;
+    left: 3%;
 }
