@@ -36,12 +36,15 @@ p {
 }
 h1{
     font-size: var(--fs-3);
+    letter-spacing: 0.5rem;
+    margin-bottom: 20px;
 }
 h3{
     color: var(--pastelred);
     font-weight: lighter;
     font-size: var(--fs-6);
     letter-spacing: 0.1rem;
+    text-transform: uppercase;
     
 }
 /*----NAVBAR-----*/
@@ -104,7 +107,9 @@ main{
     text-align: justify;
     top: -2%;
 }
-
+.hero-image-content-text h1{
+    letter-spacing: normal;
+}
 .hero-learnmore-btn{
     position: relative;
     background-color: var(--gargoylegas);
@@ -288,7 +293,7 @@ hr {
     display: grid;
     grid-column: 3 span;
     height: 600px;
-    margin: 120px 220px 500px 190px;
+    margin: 60px 220px 0px 190px;
 }
 .gallery-title {
     display: block;
@@ -339,20 +344,28 @@ hr {
 .teachers-main {
     display: grid;
     grid-column: 3 span;
-    background-color: var(--lavenderblue);  
+    background-color: var(--lavenderblue);
+    margin-top: 450px; 
 }
-
+.teachers-main h3 {
+    margin-top: 150px;
+}
 .teacher-card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 120px 220px 500px 190px;
+    margin: 120px 70px 120px 60px;
 }
 .teacher-frame-card {
     background-color: var(--white);
-    width: 80%;
+    width: 70%;
+    height: 90%;
     display: flex;
+    justify-self: center;
     transform: rotate(-2deg);
-    gap: 2rem;
+    
+    
+}
+.teacher-frame-card img {
 }
 .teacher1 {
     width: 700px;
@@ -364,7 +377,8 @@ hr {
     display: block;
     width: 80%;
     text-align: center;
-    padding: 80px 0 80px 0;
+    padding: 50px 0 80px 0;
+    margin-left: 25px;
     letter-spacing: 0.1rem;
     line-height: 2.2rem;
     
@@ -376,17 +390,14 @@ hr {
 .teacher-content ul {
     display: flex;
     list-style: none;
-    justify-content: center;
+    padding: 0;
 }
-.teacher-content li {
-    display: block;
-    margin: 0;
-    padding: 30px 10px 0px 10px;
-}
-.teacher-content li{
+.teacher-content li { 
+    
 }
 .teacher-content a img {
-    width: 25px;
+    width: 20px;
+    margin: 70px 20px;
 }
 .paper-pin {
     width: 20%;
@@ -394,4 +405,40 @@ hr {
     position: relative;
     top: -8%;
     left: 3%;
+}
+.footer-main {
+    display: grid;
+    grid-column: 3 span;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0px 0 140px;
+}
+.footer-copyright h2 {
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-family:Arial, Helvetica, sans-serif;
+}
+li {
+    list-style: none;
+}
+.footer-nav ul, .footer-kontak ul {
+    display: flex;
+    margin: 80px;
+}
+.footer-nav li a {
+    font-size: var(--fs-7);
+    color: #010101;
+    font-weight: 500;
+    padding: 0px 20px 0 20px;
+    letter-spacing: var(--fs-9);
+}
+.footer-nav li a:hover{
+    color: var(--pastelred);
+}
+.footer-kontak a img {
+    width: 25%;
+    
 }
