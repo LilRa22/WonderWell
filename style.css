@@ -44,8 +44,7 @@ h3{
     font-weight: lighter;
     font-size: var(--fs-6);
     letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    
+    text-transform: uppercase;  
 }
 /*----NAVBAR-----*/
 .nav-main {
@@ -77,6 +76,44 @@ h3{
 .nav-logo{
     margin-left: 10%;
 }
+/*-----button------*/
+.hero-learnmore-btn{
+    position: relative;
+    background-color: var(--gargoylegas);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 30px;
+    padding:2.5% 5% 2.5% 5%;
+    top: 10%;
+    font-size: 15px;
+    letter-spacing: 0.2rem;
+    transition-duration: 1s;
+   
+}
+.hero-learnmore-btn:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px dashed var(--white); 
+    border-radius: 30px;
+    width: calc(100% - 5px); 
+    height: calc(100% - 5px); 
+    box-sizing: border-box;
+    pointer-events: none; 
+}
+.hero-learnmore-btn:hover {
+    background-color:var(--deeplemon);
+    background-color: rgba(0, 0, 0, 0);
+}
+.hero-image-icon {
+    grid-column: 5;
+    grid-row: 3;
+    top: -10%;
+    left: 15%;   
+}
+
 main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -110,43 +147,6 @@ main{
 .hero-image-content-text h1{
     letter-spacing: normal;
 }
-.hero-learnmore-btn{
-    position: relative;
-    background-color: var(--gargoylegas);
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 30px;
-    padding:2.5% 5% 2.5% 5%;
-    top: 10%;
-    font-size: 15px;
-    letter-spacing: 0.2rem;
-   
-}
-/* Pseudo-element untuk border di tengah */
-.hero-learnmore-btn:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px dashed var(--white); 
-    border-radius: 30px;
-    width: calc(100% - 5px); 
-    height: calc(100% - 5px); 
-    box-sizing: border-box;
-    pointer-events: none; 
-}
-
-.hero-learnmore-btn:hover {
-    background-color:var(--deeplemon);
-    background-color: rgba(0, 0, 0, 0);
-}
-.hero-image-icon {
-    grid-column: 5;
-    grid-row: 3;
-    top: -10%;
-    left: 15%;   
-}
 
 .hero-image-icon, 
 .hero-image-cloud-left-icon, 
@@ -168,6 +168,7 @@ main{
     padding: 32%;
     left: -18%;
     cursor: pointer;
+    transition-duration: 1s;
 }
 
 .hero-image-sun-icon:hover {
@@ -176,14 +177,25 @@ main{
     
 }
 .hero-image-cloud-left-icon {
+    background-image: url(img/cloud-png.webp);
+    background-size: 185px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20%;
     top: -35%;
     left: 43%;
     width: 180px;  
 }
 .hero-image-cloud-right-icon {
+    background-image: url(img/cloud-png.webp);
+    background-size: 185px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20%;
     top: -59%;
     left: -33%;
     width: 180px;
+
 }
 /*
 .program-great-teacher-card {
@@ -358,17 +370,13 @@ hr {
 .teacher-frame-card {
     background-color: var(--white);
     width: 70%;
-    height: 90%;
+    height: 100%;
     display: flex;
     justify-self: center;
     transform: rotate(-2deg);
-    
-    
-}
-.teacher-frame-card img {
+  
 }
 .teacher1 {
-    width: 700px;
     transform: rotate(2deg);
    
    
@@ -387,17 +395,14 @@ hr {
     font-size: 13px;
     letter-spacing: normal;
 }
-.teacher-content ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-.teacher-content li { 
-    
-}
+
 .teacher-content a img {
     width: 20px;
-    margin: 70px 20px;
+    margin: 70px 0px;
+}
+.social-media{
+    display: flex;
+    margin: 50px 0px  0 -10px;
 }
 .paper-pin {
     width: 20%;
@@ -438,7 +443,25 @@ li {
 .footer-nav li a:hover{
     color: var(--pastelred);
 }
-.footer-kontak a img {
-    width: 25%;
+.footer-kontak{
+    padding: 0 10px;
     
+}
+/*------link social media------*/
+svg {
+    width: 20px;
+    margin: 0 10px;
+    transition: all 0.25s;
+}
+.fb:hover {
+    fill: #0866FF;
+}
+.ig:hover {
+    fill: #E4405F;
+}
+.twitter:hover {
+    fill: #b083ff;
+}
+.gmail:hover {
+    fill: #EA4335;
 }
