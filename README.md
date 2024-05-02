@@ -3,5 +3,5 @@
 <h2>OverView</h2>
 
 <p align="center">
-  <img src="img/wonderwell4.png">
+  <img src="img/wonderwell4.png"  width="350">
 </p>
